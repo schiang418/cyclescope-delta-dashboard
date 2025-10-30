@@ -5,9 +5,21 @@ import fs from "node:fs";
 import path from "path";
 import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
+import type { Plugin } from "vite";
 
+// Plugin to replace environment variables in index.html
+const htmlEnvPlugin = (): Plugin => ({
+  name: 'html-env-replace',
+  transformIndexHtml(html) {
+    return html
+      .replace(/%VITE_APP_TITLE%/g, process.env.VITE_APP_TITLE || 'CycleScope')
+      .replace(/%VITE_APP_LOGO%/g, process.env.VITE_APP_LOGO || '/logo.svg')
+      .replace(/%VITE_ANALYTICS_ENDPOINT%/g, process.env.VITE_ANALYTICS_ENDPOINT || '')
+      .replace(/%VITE_ANALYTICS_WEBSITE_ID%/g, process.env.VITE_ANALYTICS_WEBSITE_ID || '');
+  },
+});
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), htmlEnvPlugin()];
 
 export default defineConfig({
   plugins,
