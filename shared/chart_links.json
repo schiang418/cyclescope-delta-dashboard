@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "service_name": "CycleScope Delta",
+    "total_charts": 14,
+    "created_date": "2025-10-30",
+    "description": "14 core market analysis charts for CycleScope Delta dashboard"
+  },
+  "charts": [
+    {
+      "id": 1,
+      "name": "SPXA50R",
+      "description": "S&P 500 % Above 50-day MA (6-month)",
+      "category": "BREADTH",
+      "priority": "critical",
+      "url": "https://schrts.co/EcqJFvCr"
+    },
+    {
+      "id": 2,
+      "name": "SPXA150R",
+      "description": "S&P 500 % Above 150-day MA (6-month)",
+      "category": "BREADTH",
+      "priority": "high",
+      "url": "https://schrts.co/twpiWSeJ"
+    },
+    {
+      "id": 3,
+      "name": "SPXA200R",
+      "description": "S&P 500 % Above 200-day MA (6-month)",
+      "category": "BREADTH",
+      "priority": "critical",
+      "url": "https://schrts.co/biIPeUKq"
+    },
+    {
+      "id": 4,
+      "name": "HYG_IEF",
+      "description": "High Yield vs Treasury (HYG:IEF) 6-month",
+      "category": "LIQUIDITY_CREDIT",
+      "priority": "high",
+      "url": "https://schrts.co/ycCmkqKZ"
+    },
+    {
+      "id": 5,
+      "name": "LQD_IEF",
+      "description": "Investment Grade vs Treasury (LQD:IEF) 6-month",
+      "category": "LIQUIDITY_CREDIT",
+      "priority": "high",
+      "url": "https://schrts.co/sGaxUYIK"
+    },
+    {
+      "id": 6,
+      "name": "VIX_VXV",
+      "description": "VIX Term Structure (VIX:VXV) 6-month",
+      "category": "VOLATILITY",
+      "priority": "high",
+      "url": "https://schrts.co/puyphxTJ"
+    },
+    {
+      "id": 7,
+      "name": "VVIX",
+      "description": "Volatility of VIX (VVIX) 6-month",
+      "category": "VOLATILITY",
+      "priority": "medium",
+      "url": "https://schrts.co/xrKsGPYI"
+    },
+    {
+      "id": 8,
+      "name": "VIX",
+      "description": "VIX Index 6-month",
+      "category": "VOLATILITY",
+      "priority": "critical",
+      "url": "https://schrts.co/diUcXUiB"
+    },
+    {
+      "id": 9,
+      "name": "RSP_SPY",
+      "description": "Equal Weight vs Market Cap (RSP:SPY) 6-month",
+      "category": "LEADERSHIP",
+      "priority": "high",
+      "url": "https://schrts.co/KjztDjXr"
+    },
+    {
+      "id": 10,
+      "name": "SMH_SPY",
+      "description": "Semiconductors vs S&P 500 (SMH:SPY) 6-month",
+      "category": "LEADERSHIP",
+      "priority": "high",
+      "url": "https://schrts.co/RMjAJXpM"
+    },
+    {
+      "id": 11,
+      "name": "CPCE",
+      "description": "Put/Call Ratio (CPCE) 1-year",
+      "category": "HELPFUL_OPTIONALS",
+      "priority": "medium",
+      "url": "https://schrts.co/bKEDqYYJ"
+    },
+    {
+      "id": 12,
+      "name": "XLY_XLP",
+      "description": "Consumer Discretionary vs Staples (XLY:XLP) 6-month",
+      "category": "HELPFUL_OPTIONALS",
+      "priority": "high",
+      "url": "https://schrts.co/thJpfmUG"
+    },
+    {
+      "id": 13,
+      "name": "IWFIWDV",
+      "description": "Growth vs Value (IWF:IWD) 6-month",
+      "category": "HELPFUL_OPTIONALS",
+      "priority": "medium",
+      "url": "https://schrts.co/UMTQAJkV"
+    },
+    {
+      "id": 14,
+      "name": "USD",
+      "description": "US Dollar Index (USD) 6-month",
+      "category": "HELPFUL_OPTIONALS",
+      "priority": "medium",
+      "url": "https://schrts.co/bmiVsdnZ"
+    }
+  }
+}
+
