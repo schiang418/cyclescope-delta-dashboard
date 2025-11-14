@@ -127,7 +127,7 @@ export async function getChartImageBuffer(chart: ChartInfo): Promise<Buffer | nu
     console.log(`Downloading chart: ${chart.name}`);
     
     // Call Python script without output path to get base64 data
-    const command = `python3.11 "${PYTHON_SCRIPT}" "${chart.url}"`;
+    const command = `${PYTHON_CMD} "${PYTHON_SCRIPT}" "${chart.url}"`;
     
     const { stdout, stderr } = await execAsync(command, {
       timeout: 60000,
