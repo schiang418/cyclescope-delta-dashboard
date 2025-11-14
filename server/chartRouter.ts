@@ -257,7 +257,7 @@ export const chartRouter = router({
       }
 
       // Capture chart image
-      const imageBuffer = await getChartImageBuffer(chart.url);
+      const imageBuffer = await getChartImageBuffer(chart);
       
       // Convert to base64 for download
       const base64Image = imageBuffer.toString('base64');
