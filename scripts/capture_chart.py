@@ -36,7 +36,7 @@ def setup_driver():
     chrome_options.add_argument('--disable-software-rasterizer')
     chrome_options.add_argument('--disable-extensions')
     chrome_options.add_argument('--disable-setuid-sandbox')
-    chrome_options.add_argument('--single-process')
+    # chrome_options.add_argument('--single-process')  # Causes Chrome to crash with DevTools disconnection
     chrome_options.add_argument('--disable-background-networking')
     chrome_options.add_argument('--disable-default-apps')
     chrome_options.add_argument('--disable-sync')
@@ -67,8 +67,16 @@ def setup_driver():
             if chrome_paths:
                 chrome_options.binary_location = chrome_paths[0]
     
-    driver = webdriver.Chrome(options=chrome_options)
-    return driver
+    try:
+        print(f"DEBUG: Attempting to start Chrome with options", file=sys.stderr)
+        driver = webdriver.Chrome(options=chrome_options)
+        print(f"DEBUG: Chrome started successfully", file=sys.stderr)
+        return driver
+    except Exception as e:
+        print(f"ERROR starting Chrome: {str(e)}", file=sys.stderr)
+        import traceback
+        print(f"TRACEBACK:\n{traceback.format_exc()}", file=sys.stderr)
+        raise
 
 def capture_chart_screenshot(url, output_path=None):
     """
@@ -155,9 +163,14 @@ def main():
         sys.exit(0)
         
     except Exception as e:
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"ERROR: {str(e)}", file=sys.stderr)
+        print(f"TRACEBACK:\n{error_details}", file=sys.stderr)
         result = {
             "success": False,
-            "error": str(e)
+            "error": str(e),
+            "traceback": error_details
         }
         print(json.dumps(result))
         sys.exit(1)
