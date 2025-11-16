@@ -195,7 +195,7 @@ export const CHART_CATEGORIES: ChartCategory[] = [
         description: "S&P 500 Index 6-month",
         category: "Additional Indicators",
         priority: "critical",
-        url: "https://schrts.co/wMTkaqeS",
+        url: "https://schrts.co/IQTdRpUv",
         symbol: "$SPX"
       },
       {
@@ -204,7 +204,7 @@ export const CHART_CATEGORIES: ChartCategory[] = [
         description: "Copper to Gold Ratio 6-month",
         category: "Additional Indicators",
         priority: "medium",
-        url: "https://schrts.co/fADItcqz",
+        url: "https://schrts.co/QnbbDZKy",
         symbol: "$COPPER:$GOLD"
       },
       {
@@ -213,7 +213,7 @@ export const CHART_CATEGORIES: ChartCategory[] = [
         description: "Junk Bonds vs Treasury (JNK:IEF) 6-month",
         category: "Additional Indicators",
         priority: "high",
-        url: "https://schrts.co/tYzJxkG5",
+        url: "https://schrts.co/cMwKzCMR",
         symbol: "JNK:IEF"
       },
       {
