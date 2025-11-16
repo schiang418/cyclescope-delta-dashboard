@@ -182,6 +182,59 @@ export const CHART_CATEGORIES: ChartCategory[] = [
         symbol: "$USD"
       }
     ]
+  },
+  {
+    id: "additional_indicators",
+    title: "ADDITIONAL INDICATORS",
+    emoji: "6️⃣",
+    count: 5,
+    charts: [
+      {
+        id: 15,
+        name: "SPX",
+        description: "S&P 500 Index 6-month",
+        category: "Additional Indicators",
+        priority: "critical",
+        url: "https://schrts.co/wMTkaqeS",
+        symbol: "$SPX"
+      },
+      {
+        id: 16,
+        name: "COPPER_GOLD",
+        description: "Copper to Gold Ratio 6-month",
+        category: "Additional Indicators",
+        priority: "medium",
+        url: "https://schrts.co/fADItcqz",
+        symbol: "$COPPER:$GOLD"
+      },
+      {
+        id: 17,
+        name: "JNK_IEF",
+        description: "Junk Bonds vs Treasury (JNK:IEF) 6-month",
+        category: "Additional Indicators",
+        priority: "high",
+        url: "https://schrts.co/tYzJxkG5",
+        symbol: "JNK:IEF"
+      },
+      {
+        id: 18,
+        name: "XLK_XLP",
+        description: "Technology vs Consumer Staples (XLK:XLP) 6-month",
+        category: "Additional Indicators",
+        priority: "high",
+        url: "https://schrts.co/SiYGGGFg",
+        symbol: "XLK:XLP"
+      },
+      {
+        id: 19,
+        name: "TNX",
+        description: "10-Year Treasury Yield ($TNX) 6-month",
+        category: "Additional Indicators",
+        priority: "high",
+        url: "https://schrts.co/fuqgkMNr",
+        symbol: "$TNX"
+      }
+    ]
   }
 ];
 
