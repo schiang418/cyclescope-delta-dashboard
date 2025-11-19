@@ -36,7 +36,7 @@ def setup_driver():
     chrome_options.add_argument('--disable-software-rasterizer')
     chrome_options.add_argument('--disable-extensions')
     chrome_options.add_argument('--disable-setuid-sandbox')
-    # chrome_options.add_argument('--single-process')  # Causes Chrome to crash with DevTools disconnection
+    chrome_options.add_argument('--single-process')
     chrome_options.add_argument('--disable-background-networking')
     chrome_options.add_argument('--disable-default-apps')
     chrome_options.add_argument('--disable-sync')
