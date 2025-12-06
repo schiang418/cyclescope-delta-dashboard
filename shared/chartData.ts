@@ -204,7 +204,7 @@ export const CHART_CATEGORIES: ChartCategory[] = [
         description: "Copper to Gold Ratio 6-month",
         category: "Additional Indicators",
         priority: "medium",
-        url: "https://schrts.co/QnbbDZKy",
+        url: "https://schrts.co/TdhwWnCf",
         symbol: "$COPPER:$GOLD"
       },
       {
@@ -213,7 +213,7 @@ export const CHART_CATEGORIES: ChartCategory[] = [
         description: "Junk Bonds vs Treasury (JNK:IEF) 6-month",
         category: "Additional Indicators",
         priority: "high",
-        url: "https://schrts.co/cMwKzCMR",
+        url: "https://schrts.co/nDawnFsn",
         symbol: "JNK:IEF"
       },
       {
