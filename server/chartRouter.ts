@@ -87,6 +87,24 @@ async function updateChartsInBackground(chartsToUpdate: any[]): Promise<void> {
     mkdirSync(chartsDir, { recursive: true });
   }
   
+  // CRITICAL: Delete all old chart files before generating new ones
+  // This prevents serving stale/incorrect charts
+  console.log('[Background] Cleaning up old chart files...');
+  try {
+    const { readdirSync, unlinkSync } = require('fs');
+    const files = readdirSync(chartsDir);
+    let deletedCount = 0;
+    for (const file of files) {
+      if (file.endsWith('.png')) {
+        unlinkSync(join(chartsDir, file));
+        deletedCount++;
+      }
+    }
+    console.log(`[Background] Deleted ${deletedCount} old chart files`);
+  } catch (error) {
+    console.error('[Background] Error cleaning up old charts:', error);
+  }
+  
   let successCount = 0;
   const results = [];
   
